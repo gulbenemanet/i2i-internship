@@ -1,0 +1,5 @@
+23:07:2024 [main] ERROR myTimerLoggings.myTimerLoggings - 21:00:00
+23:07:2024 [main] ERROR myTimerLoggings.myTimerLoggings - 22:00:00
+23:07:2024 [main] ERROR myTimerLoggings.myTimerLoggings - 23:00:00
+23:07:2024 [Timer-2] ERROR myTimerLoggings.myTimerLoggings - Error Log Time: 23:00:00
+23:07:2024 [Timer-2] ERROR myTimerLoggings.myTimerLoggings - Error Log Time: 23:00:00

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+	<Properties>
+		<Property name="filename">./logs</Property>
+		<Property name="infoLogs">./logs</Property>
+		<Property name="debugLogs">./logs</Property>
+		<Property name="errorLogs">./logs</Property>
+	</Properties>
+	<Appenders>
+		<RollingFile name="infoLogs"
+			fileName="${filename}/info.Log"
+			filePattern="${filename}/info-%d{dd-MM-yyyy}.Log">
+			<PatternLayout>
+				<pattern> %d{dd:MM:yyyy} [%t] %-5level %logger{36} - %msg%n
+				</pattern>
+			</PatternLayout>
+			<SizeBasedTriggeringPolicy size="1 MB" />
+			<Filters>
+				<ThresholdFilter level="error" onMatch="DENY"
+					onMismatch="NEUTRAL" />
+				<ThresholdFilter level="info" onMatch="ACCEPT"
+					onMismatch="DENY" />
+			</Filters>
+		</RollingFile>
+
+
+		<RollingFile name="debugLogs"
+			fileName="${filename}/debug.Log"
+			filePattern="${filename}/debug-%d{dd-MM-yyyy}.Log">
+			<PatternLayout>
+				<pattern>%d{dd:MM:yyyy} [%t] %-5level %logger{36} - %msg%n
+				</pattern>
+			</PatternLayout>
+			<SizeBasedTriggeringPolicy size="1 MB" />
+			<Filters>
+				<ThresholdFilter level="info" onMatch="DENY"
+					onMismatch="NEUTRAL" />
+				<ThresholdFilter level="error" onMatch="DENY"
+					onMismatch="NEUTRAL" />
+				<ThresholdFilter level="debug" onMatch="ACCEPT"
+					onMismatch="DENY" />
+			</Filters>
+		</RollingFile>
+
+
+		<RollingFile name="errorLogs"
+			fileName="${filename}/error.Log"
+			filePattern="${filename}/error-%d{dd-MM-yyyy}.Log">
+			<PatternLayout>
+				<pattern>%d{dd:MM:yyyy} [%t] %-5level %logger{36} - %msg%n
+				</pattern>
+			</PatternLayout>
+			<SizeBasedTriggeringPolicy size="1 MB" />
+		</RollingFile>
+
+        <DefaultRolloverStrategy>
+            <Delete basePath="logs" maxDepth="1">
+                <IfFileName glob="Timer-*.log"/>
+                <IfLastModified age="1d"/>
+            </Delete>
+        </DefaultRolloverStrategy>
+
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout
+				pattern="%d{HH:mm:ss} [%t] %-5level %logger{36} - %msg%n" />
+		</Console>
+	</Appenders>
+	<Loggers>
+		<Root level="debug">
+			<AppenderRef ref="Console" />
+			<AppenderRef ref="infoLogs" level="info" />
+			<AppenderRef ref="debugLogs" level="debug" />
+			<AppenderRef ref="errorLogs" level="error" />
+		</Root>
+	</Loggers>
+</Configuration>

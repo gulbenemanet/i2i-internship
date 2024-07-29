@@ -1,0 +1,6 @@
+23:07:2024 [main] INFO  myTimerLoggings.myTimerLoggings - 20:28:00
+23:07:2024 [main] INFO  myTimerLoggings.myTimerLoggings - 20:29:00
+23:07:2024 [main] INFO  myTimerLoggings.myTimerLoggings - 20:30:00
+23:07:2024 [Timer-1] INFO  myTimerLoggings.myTimerLoggings - Info Log Time: 23:00:00
+23:07:2024 [Timer-1] INFO  myTimerLoggings.myTimerLoggings - Info Log Time: 23:01:00
+23:07:2024 [Timer-1] INFO  myTimerLoggings.myTimerLoggings - Info Log Time: 23:05:00

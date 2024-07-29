@@ -1,0 +1,53 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.example</groupId>
+  <artifactId>akka_homework</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <dependencies>
+    <dependency>
+        <groupId>com.typesafe.akka</groupId>
+        <artifactId>akka-actor_2.13</artifactId>
+        <version>2.6.20</version> <!-- or another compatible version -->
+    </dependency>
+    <dependency>
+        <groupId>org.scala-lang</groupId>
+        <artifactId>scala-library</artifactId>
+        <version>2.13.10</version> <!-- ensure this is the correct version -->
+    </dependency>
+    <dependency>
+            <groupId>com.typesafe.akka</groupId>
+            <artifactId>akka-remote_2.13</artifactId>
+            <version>2.6.20</version>
+        </dependency>
+     <dependency>
+        <groupId>com.typesafe.akka</groupId>
+        <artifactId>akka-actor-typed_2.13</artifactId>
+        <version>2.6.20</version>
+    </dependency>
+
+    <!-- Akka Streams -->
+    <dependency>
+        <groupId>com.typesafe.akka</groupId>
+        <artifactId>akka-stream_2.13</artifactId>
+        <version>2.6.20</version>
+    </dependency>
+
+    <dependency>
+        <groupId>com.typesafe</groupId>
+        <artifactId>config</artifactId>
+        <version>1.4.2</version> <!-- this should generally be fine -->
+    </dependency>
+    <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>1.7.30</version>
+    </dependency>
+    <dependency>
+        <groupId>ch.qos.logback</groupId>
+        <artifactId>logback-classic</artifactId>
+        <version>1.2.3</version>
+    </dependency>
+</dependencies>
+
+</project>
